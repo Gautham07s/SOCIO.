@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('about img.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+      border-radius: 10px;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Socio+ Volunteer Information</h1>
+    <p>Welcome to Socio+ Volunteer information page. Below, you'll find useful information about SOCIO+.</p>
+    <div id="types">
+      <h2>Types of Organ Donation</h2>
+      <ul id="typesList">
+        <!-- Types of organ donation will be populated dynamically using JavaScript -->
+      </ul>
+    </div>
+    <div id="process">
+      <h2>Process of Volunteering</h2>
+      <p id="processDescription"> <!-- Process of organ donation description will be populated dynamically using JavaScript --> </p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Types of Volunteering
+      const typesList = document.getElementById("typesList");
+      const types = ["Philanthrophy", "Environmental Volunteering", "Skill-Based Volunteering", "Disaster Relief Volunteering"];
+      
+      types.forEach(type => {
+        const listItem = document.createElement("li");
+        listItem.textContent = type;
+        typesList.appendChild(listItem);
+      });
+
+      // Process of organ donation
+      const processDescription = document.getElementById("processDescription");
+      const processText = "Socio+ is a comprehensive platform designed to facilitate volunteering for social needs, connecting volunteers, organizations, and individuals seeking assistance. This project encompasses several key elements. Firstly, it allows users to enroll, either as individuals, organizations, or volunteers, and create profiles that capture essential information, including skills, interests, and affiliations. Secondly, it includes a robust request management system, enabling individuals in need to submit detailed requests for assistance across various categories such as healthcare, education, disaster relief, and more. By facilitating communication and collaboration, it aims to bridge the gap between those who want to make a difference and those who require assistance. It is a platform where individuals, organizations, and volunteers come together to create a collective force for positive change. At its heart, Socio+ is about connecting hearts, fostering collaboration, and changing lives for the better.";
+
+      processDescription.textContent = processText;
+    });
+  </script>
+</body>
+</html>
